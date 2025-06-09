@@ -1,0 +1,131 @@
+/* HomePage.css - Updated */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+  color: #212529;
+}
+
+.hero-section {
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  color: white;
+  text-align: left;
+}
+
+.logo-img {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+.button-group .btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.primary-btn {
+  background-color: #f4a261;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #e76f51;
+}
+
+.secondary-btn {
+  background-color: #a8dadc;
+  color: #1d3557;
+}
+
+.secondary-btn:hover {
+  background-color: #457b9d;
+  color: white;
+}
+
+.section-title h2 {
+  text-align: center;
+  color: #1d3557;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.about .container {
+  padding: 40px 0;
+}
+
+.about p,
+.about ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about ul li {
+  margin-bottom: 8px;
+}
+
+.text-center .btn {
+  margin-top: 20px;
+}
+
+.section-bg {
+  background-color: #d7eff0;
+}
+
+.services .icon-box {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.services .icon-box:hover {
+  transform: translateY(-10px);
+}
+
+.services .icon-box h4 {
+  color: #1d3557;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.services .icon-box p {
+  font-size: 15px;
+  color: #555;
+}
+
+.img-fluid.animated {
+  transform: translate(-20px, 10px);
+  width: calc(100% + 5px);
+  transition: transform 0.5s ease, width 0.5s ease;
+}
+
+.img-fluid.animated:hover {
+  transform: translate(0, 0) scale(1.05);
+}
+img:not([src="/img/hero-img.png"]) {
+  max-width: 100%;
+  width: 300px;  /* Increased size */
+  height: auto;
+}

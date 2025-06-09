@@ -1,0 +1,16 @@
+body {
+  background: #f9f9f9;
+}
+
+.card {
+  background-color: white;
+}
+
+.btn-outline-danger:hover {
+  background-color: #0d5e74;
+  color: white;
+}
+.custom-card-container {
+  width: 100%;
+  max-width: 900px; /* or any size you want */
+}

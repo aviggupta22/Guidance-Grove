@@ -1,0 +1,69 @@
+/* Login.css */
+body {
+  background: linear-gradient(to right, #edf6f9, #cce3dc);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.row.d-flex.justify-content-center.align-items-center {
+  min-height: 90vh;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn-primary {
+  background-color: #0077b6;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #023e8a;
+}
+
+.btn-outline-primary {
+  border-color: #0077b6;
+  color: #0077b6;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0077b6;
+  color: white;
+}
+
+h4 {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #023e8a;
+}
+
+input.form-control {
+  border-radius: 8px;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.text-center img {
+  margin-bottom: 20px;
+  width: 5px; /* or any size you want */
+  height: auto; /* keep aspect ratio */
+}
+
+
+.shadow {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
