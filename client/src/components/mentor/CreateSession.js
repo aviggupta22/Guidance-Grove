@@ -131,9 +131,9 @@ export default function CreateSession(props) {
                               onChange={onChange}
                               required>
                             <option value="" defaultValue disabled>--Select Your Subject--</option>
-                            <option>Math</option>
-                            <option>Science</option>
-                            <option>English</option>
+                            <option>DSA</option>
+                            <option>Web Devlopment</option>
+                            <option>Machine Learning & Artificial Intelligence</option>
                             <option>Other</option>
                           </select>
                             </div>

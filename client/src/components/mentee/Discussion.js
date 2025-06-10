@@ -13,7 +13,7 @@ export default function Discussion() {
 
   // Function to get user datas
   async function getUser() {
-    const response = await fetch(`http://localhost:5000/api/auth/getUser`, {
+    const response = await fetch(`http://localhost:5001/api/auth/getUser`, {
       method: "GET",
       headers: {
         "auth-token": localStorage.getItem("token"),

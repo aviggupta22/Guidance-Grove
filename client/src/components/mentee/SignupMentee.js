@@ -55,7 +55,7 @@ export const SignupMentee = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/api/auth/signup`, {
+    const response = await fetch(`http://localhost:5001/api/auth/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -161,23 +161,7 @@ export const SignupMentee = (props) => {
               </div>
 
               {/* Image Upload */}
-              <div className="form-outline mb-3">
-                <label htmlFor="img" className="form-label">Upload Your Image</label>
-                <input
-                  type="file"
-                  className="form-control"
-                  id="img"
-                  accept="image/*"
-                  onChange={onPhoto}
-                />
-                <button
-                  type="button"
-                  className="btn btn-secondary mt-2"
-                  onClick={uploadImage}
-                >
-                  Upload Image
-                </button>
-              </div>
+              
 
               {/* Preview */}
               {credentials.img && (

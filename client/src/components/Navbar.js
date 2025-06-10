@@ -26,7 +26,7 @@ export default function Navbar(props) {
               alt="logo"
             />
             <Link className="navbar-brand" to="/">
-              Maestro
+              
             </Link>
             <button
               className="navbar-toggler"
@@ -56,7 +56,7 @@ export default function Navbar(props) {
                       Home
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link
                       className={`nav-link ${
                         location.pathname === "/chat" ? "active" : ""
@@ -65,7 +65,7 @@ export default function Navbar(props) {
                     >
                       Chat
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link
                       className={`nav-link ${
@@ -76,16 +76,7 @@ export default function Navbar(props) {
                       Discussion Forum
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link
-                      className={`nav-link ${
-                        location.pathname === "/books" ? "active" : ""
-                      }`}
-                      to="/books"
-                    >
-                      Books
-                    </Link>
-                  </li>
+                  
                   <li className="nav-item">
                     <Link
                       className={`nav-link ${
@@ -126,16 +117,6 @@ export default function Navbar(props) {
                       to="/session"
                     >
                       Create Session
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className={`nav-link ${
-                        location.pathname === "/chat" ? "active" : ""
-                      }`}
-                      to="/chat"
-                    >
-                      Chat
                     </Link>
                   </li>
                   <li className="nav-item">

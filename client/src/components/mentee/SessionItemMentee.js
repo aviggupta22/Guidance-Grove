@@ -14,7 +14,7 @@ export default function Sessionitem(props) {
   ) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/sessions/enrollsession`,
+        `http://localhost:5001/api/sessions/enrollsession`,
         {
           method: "POST",
           headers: {
@@ -39,14 +39,13 @@ export default function Sessionitem(props) {
     }
   }
 let imgurl='';
-if(session.subject==='Science') imgurl='https://www.thehindu.com/education/jy3dkh/article33948588.ece/alternates/FREE_615/27epbs-science'
-else if(session.subject==='English') imgurl='https://www.englishcollege.com/sites/default/files/field/image/shutterstock_351287672.jpg'
-else if(session.subject==='Math') imgurl='https://www.uml.edu/Images/math-equations_tcm18-331050.jpg?w=x'
+if(session.subject==='Web Devlopment') imgurl='https://www.thehindu.com/education/jy3dkh/article33948588.ece/alternates/FREE_615/27epbs-Web Devlopment'
+else if(session.subject==='Machine Learning & Artificial Intelligence') imgurl='https://www.Machine Learning & Artificial Intelligencecollege.com/sites/default/files/field/image/shutterstock_351287672.jpg'
+else if(session.subject==='DSA') imgurl='https://www.uml.edu/Images/DSA-equations_tcm18-331050.jpg?w=x'
 else imgurl='https://cdn.talkesport.com/wp-content/uploads/technology-esports.jpg'
 
   return (
     <div className="card text-white mx-3" style={{ width: "19rem", backgroundColor:'#231f38' }}>
-      <img className="card-img-top" src={imgurl}  height={'220px'} alt="subject description" />
       <div className="card-body" style={{backgroundColor:'#28223f'}}>
         <h5>{session.title}</h5>
         <h5 className="card-title text-muted ">

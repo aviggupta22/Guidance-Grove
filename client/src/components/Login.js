@@ -1,4 +1,3 @@
-// Login.js
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
@@ -6,6 +5,7 @@ import "./Login.css";
 export const Login = (props) => {
   let navigate = useNavigate();
   const [credentials, setcredentials] = useState({ email: "", password: "" });
+  const [error, setError] = useState(""); // <-- New state for error message
 
   const onChange = (e) => {
     setcredentials({ ...credentials, [e.target.name]: e.target.value });
@@ -13,7 +13,7 @@ export const Login = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch("http://localhost:5001/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,12 +23,15 @@ export const Login = (props) => {
         password: credentials.password,
       }),
     });
+
     const json = await response.json();
     if (json.success) {
       localStorage.setItem("role", json.user.role);
       localStorage.setItem("token", json.authToken);
       localStorage.setItem("email", json.user.email);
       navigate("/");
+    } else {
+      setError("Invalid email or password"); // <-- Set error message
     }
   };
 
@@ -45,6 +48,11 @@ export const Login = (props) => {
               />
               <h4 className="mt-3">Guidance Grove</h4>
             </div>
+
+            {/* Show error if exists */}
+            {error && (
+              <div className="alert alert-danger text-center py-2">{error}</div>
+            )}
 
             <form onSubmit={handleSubmit}>
               <div className="form-outline mb-3">

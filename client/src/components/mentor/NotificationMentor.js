@@ -20,7 +20,7 @@ export default function NotificationMentor(props) {
 
   async function getUser() {
     const response = await fetch(
-      `http://localhost:5000/api/calendar/fetchallnoti`,
+      `http://localhost:5001/api/calendar/fetchallnoti`,
       {
         method: "GET",
         headers: {
@@ -36,7 +36,7 @@ export default function NotificationMentor(props) {
     try {
       //call api for creating calendarevent
       const response = await fetch(
-        `http://localhost:5000/api/calendar/addevent`,
+        `http://localhost:5001/api/calendar/addevent`,
         {
           method: "POST",
           headers: {
@@ -53,7 +53,7 @@ export default function NotificationMentor(props) {
       );
       //call api for deleting event
       await fetch(
-        `http://localhost:5000/api/calendar/deleteevent/${notiId}`,
+        `http://localhost:5001/api/calendar/deleteevent/${notiId}`,
         {
           method: "DELETE",
           headers: {
@@ -75,7 +75,7 @@ export default function NotificationMentor(props) {
   async function handleReject(notiId){
       try {
         await fetch(
-            `http://localhost:5000/api/calendar/deleteevent/${notiId}`,
+            `http://localhost:5001/api/calendar/deleteevent/${notiId}`,
             {
               method: "DELETE",
               headers: {
