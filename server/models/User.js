@@ -30,9 +30,7 @@ const UserSchema = new Schema({
   experience: {
     type: String,
   },
-  img: {
-    type: String,
-  },
+ 
   subject: {
     type: String,
   },

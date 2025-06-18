@@ -50,6 +50,7 @@ router.post("/signup", async (req, res) => {
     const authToken = jwt.sign(data, JWT_SECRET);
     success = true;
     res.json({ success, authToken, user });
+    console.log("success")
   } catch (error) {
     console.log(error);
     res.status(500).send({

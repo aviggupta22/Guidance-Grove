@@ -67,7 +67,7 @@ export const SignupMentee = (props) => {
     if (json.success) {
       localStorage.setItem("token", json.authToken);
       localStorage.setItem("email", json.user.email);
-      localStorage.setItem("role", json.user.role);
+      localStorage.setItem("role", json.user.role);F
       props.showAlert("Account Created Successfully", "success");
       navigate("/");
     } else {

@@ -4,57 +4,20 @@ import { useNavigate, Link } from "react-router-dom";
 export const Signup = (props) => {
   let navigate = useNavigate();
 
-  const [image, setImage] = useState(null);
   const [credentials, setcredentials] = useState({
     name: "",
     email: "",
     password: "",
-    // classsp removed
     role: "mentor",
     work: "",
     company: "",
     experience: "",
-    img: "",
     subject: "",
   });
 
   const onChange = (e) => {
     setcredentials({ ...credentials, [e.target.name]: e.target.value });
   };
-
-  const onPhoto = (e) => {
-    setImage(e.target.files[0]);
-  };
-
-  async function uploadImage() {
-    if (!image) {
-      props.showAlert("Please select an image before uploading", "warning");
-      return;
-    }
-    const data = new FormData();
-    data.append("file", image);
-    data.append("upload_preset", "jqywmvza");
-    data.append("cloud_name", "rapidhack");
-
-    try {
-      const resp = await fetch(
-        "https://api.cloudinary.com/v1_1/rapidhack/image/upload",
-        {
-          method: "POST",
-          body: data,
-        }
-      );
-      const respoJSON = await resp.json();
-      if (respoJSON.url) {
-        setcredentials((prev) => ({ ...prev, img: respoJSON.url }));
-        props.showAlert("Image uploaded successfully!", "success");
-      } else {
-        props.showAlert("Image upload failed!", "danger");
-      }
-    } catch (error) {
-      props.showAlert("Error uploading image", "danger");
-    }
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -87,8 +50,8 @@ export const Signup = (props) => {
           <div className="card rounded-4 shadow p-4">
             <h2 className="mb-4 text-center text-dark">Create an Account</h2>
 
-            <form onSubmit={handleSubmit} encType="multipart/form-data">
-              {/* Text Inputs except classsp */}
+            <form onSubmit={handleSubmit}>
+              {/* Text Inputs */}
               {[
                 { label: "Name", name: "name", type: "text", required: true },
                 { label: "Email", name: "email", type: "email", required: true },
@@ -138,22 +101,6 @@ export const Signup = (props) => {
                   <option value="ml-ai">Machine Learning & Artificial Intelligence</option>
                 </select>
               </div>
-
-              {/* Image Upload */}
-             
-               
-
-              {/* Preview Uploaded Image */}
-              {credentials.img && (
-                <div className="text-center mb-3">
-                  <img
-                    src={credentials.img}
-                    alt="Uploaded"
-                    className="img-fluid rounded"
-                    style={{ maxWidth: "250px" }}
-                  />
-                </div>
-              )}
 
               {/* Submit Button */}
               <div className="text-center mb-3">
