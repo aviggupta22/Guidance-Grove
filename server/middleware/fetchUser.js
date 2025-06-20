@@ -16,5 +16,5 @@ const fetchUser = async (req, res, next) => {
     res.status(401).send({ error: "please authenticate using a valid token" });
   }
 };
-
+ 
 module.exports = fetchUser;

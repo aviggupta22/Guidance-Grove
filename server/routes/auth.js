@@ -39,7 +39,6 @@ router.post("/signup", async (req, res) => {
       work: req.body.work,
       company: req.body.company,
       experience: req.body.experience,
-      img: req.body.img,
       subject: req.body.subject,
     });
     const data = {
