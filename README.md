@@ -15,7 +15,6 @@
 - **Frontend**: React.js, HTML, CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
 - **Other Tools**: Firebase (optional), Git, GitHub
 
 ## 🚀 Getting Started
