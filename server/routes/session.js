@@ -39,7 +39,7 @@ router.post(
   body("time", "Enter a valid title").isLength({ min: 1 }),
   body("description", "Enter a valid title").isLength({ min: 1 }),
   body("link", "Enter a valid title").isLength({ min: 1 }),
-  body("creator", "Enter a valid title").isLength({ min: 1 }),
+  body("creator", "Enter a valid title").isLength({ min: 2 }),
 
   fetchUser,
   async (req, res) => {
