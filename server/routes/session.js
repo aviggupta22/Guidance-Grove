@@ -37,8 +37,8 @@ router.post(
   body("classenrolled", "Enter a valid title").isLength({ min: 1 }),
   body("date", "Enter a valid title").isLength({ min: 1 }),
   body("time", "Enter a valid title").isLength({ min: 1 }),
-  body("description", "Enter a valid title").isLength({ min: 1 }),
-  body("link", "Enter a valid title").isLength({ min: 1 }),
+  body("description", "Enter a valid title").isLength({ min: 2 }),
+  body("link", "Enter a valid title").isLength({ min: 2 }),
   body("creator", "Enter a valid title").isLength({ min: 2 }),
 
   fetchUser,
