@@ -20,7 +20,7 @@ router.post("/addreview/:id", fetchUser, async (req, res) => {
     res.json(savedReview);
   } catch (error) {
     console.log(error.message);
-    res.status(500).send("Oops internal server error occured");
+    res.status(500).send("Oops internal server err occured");
   }
 });
 
